@@ -1386,7 +1386,7 @@ L2.BorderSizePixel = 0
 L2.Position = UDim2.new(0.120833337, 0, 0.0952890813, 0)
 L2.Size = UDim2.new(1, 53.5, 1, 53.5)
 L2.BackgroundTransparency = 1.000
-L2.Image = "rbxassetid://94170180796200"
+L2.Image = "rbxassetid://82654260335224"
 L2.Draggable = true
 L2.MouseButton1Click:Connect(function()
   game:GetService("VirtualInputManager"):SendKeyEvent(true,305,false,game)
