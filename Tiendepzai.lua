@@ -212,7 +212,7 @@ ttittles.BackgroundTransparency = 1
 ttittles.Position = UDim2.new(0,30,0.05,0)
 ttittles.Size = UDim2.new(0, 255, 0.05, 25)
 ttittles.Font = Enum.Font.SourceSansBold
-ttittles.Text = "Tiendepzai Hub"
+ttittles.Text = "Tiendepzai & Hiru V1"
 ttittles.TextSize = 17.000
 ttittles.TextColor3 = Color3.fromRGB(232, 35, 84)
 ttittles.TextXAlignment = Enum.TextXAlignment.Left
@@ -1386,7 +1386,7 @@ L2.BorderSizePixel = 0
 L2.Position = UDim2.new(0.120833337, 0, 0.0952890813, 0)
 L2.Size = UDim2.new(0, 53.5, 0, 53.5)
 L2.BackgroundTransparency = 1.000
-L2.Image = "rbxassetid://125608854581596"
+L2.Image = "rbxassetid://92984205310992"
 L2.Draggable = true
 L2.MouseButton1Click:Connect(function()
   game:GetService("VirtualInputManager"):SendKeyEvent(true,305,false,game)
@@ -3484,25 +3484,25 @@ end)
     Kill_At = 28
 -------------------------------------------------------------------------------------------------------
 local A = Update:Window(Enum.KeyCode.RightControl);
-local I = A:T("STATUS","rbxassetid://10734984606")
-local Mn = A:T("FARM","rbxassetid://10723407389")
-local St = A:T("SETTING","rbxassetid://10734950309")
-local M = A:T("ITEM","rbxassetid://10734975692")
-local V4 = A:T("RACE V4","rbxassetid://10747372167")
-local E = A:T("SEA EVENT","rbxassetid://10709761530")
-local P = A:T("PLAYER","rbxassetid://10747373176")
-local V = A:T("ESP","rbxassetid://10723346959")
-local R = A:T("RAID","rbxassetid://10723345749")
-local T = A:T("TELEPORT","rbxassetid://10723434557")
-local S = A:T("SHOP","rbxassetid://10734952479")
-local D = A:T("FRUIT","rbxassetid://10709761889")
-local Mc = A:T("SERVER","rbxassetid://10709782582")
+local I = A:T("Trạng thái","rbxassetid://10734984606")
+local Mn = A:T("Chung","rbxassetid://10723407389")
+local St = A:T("Cài Đặt","rbxassetid://10734950309")
+local M = A:T("Vật Phẩm","rbxassetid://10734975692")
+local V4 = A:T("Tộc - Đảo Bí Ẩn","rbxassetid://10747372167")
+local E = A:T("Sự Kiện Biển","rbxassetid://10709761530")
+local P = A:T("Người Chơi","rbxassetid://10747373176")
+local V = A:T("Thị Giác","rbxassetid://10723346959")
+local R = A:T("Tập Kích","rbxassetid://10723345749")
+local T = A:T("Di Chuyển","rbxassetid://10723434557")
+local S = A:T("Cửa Hàng","rbxassetid://10734952479")
+local D = A:T("Trái Ác Quỷ","rbxassetid://10709761889")
+local Mc = A:T("Máy Chủ","rbxassetid://10709782582")
 --------------------------------------------------------------------------------------------------------
 I:Seperator("Discord")
 
 I:Label("Mọi Người Đều Tham Gia Giao Lưu")
 I:Button("Copy Discord Link",function()
-setclipboard("MEMAYBEO") 
+setclipboard("https://discord.gg/c5EYjcvC") 
 end)
 
 I:Seperator("Thời Gian")
@@ -3609,9 +3609,9 @@ end)
 --------------------------------------------------------------------------------------------------------
 Mn:Seperator("Chế Độ Farm")
 
-local WeaponList = {"Melee","Sword","Fruit","Gun"}
+local WeaponList = {"Võ","Kiếm","Trái","Súng"}
 _G.SelectWeapon = "Võ"
-Mn:Dropdown("Select Weapon",WeaponList,function(V)
+Mn:Dropdown("Chọn Vũ Khí",WeaponList,function(V)
 _G.SelectWeapon = V
 end)
 
@@ -3655,7 +3655,7 @@ task.spawn(function()
 	end
     end)
 
-local AttackList = {"Low", "Normal", "Fast", "Super Fast"}
+local AttackList = {"Chậm", "Bình Thường", "Nhanh", "Cực Nhanh"}
 FireCooldown = "Cực Nhanh"
 Mn:Dropdown("Fast Attack Delay", AttackList,function(V)
     FireCooldown = V
@@ -3680,7 +3680,7 @@ end)
 
 Mn:Seperator("Tự Động Cày")
 
-    Mn:Toggle("Farm Level",_G.Farm,function(V)
+    Mn:Toggle("Cày Cấp",_G.Farm,function(V)
         _G.Level = V
         StopTween(_G.Farm)
     end)
@@ -3829,7 +3829,7 @@ spawn(function()
 	end)
 end
 
-Mn:Toggle("Farm Level And Item",false,function(V)
+Mn:Toggle("Cày Cấp Và Lấy Vật Phẩm",false,function(V)
        _G.Level = V
        _G.SelectWeapon = "Combat"
        _G.Stats_Kaitun = V
@@ -3883,7 +3883,7 @@ Mn:Toggle("Farm Level And Item",false,function(V)
         end
     end)
     
-   Mn:Toggle("Farm Near Mob",_G.FarmNearest,function(V)
+   Mn:Toggle("Cày Quái Ở Gần",_G.FarmNearest,function(V)
    _G.FarmNearest = V
    StopTween(_G.FarmNearest)
  end)
@@ -3918,7 +3918,7 @@ spawn(function()
 	end
     end)
     
-    Mn:Seperator("Elite")
+    Mn:Seperator("Trùm Bí Ẩn")
     
     local Et = Mn:Label("Thợ săn tinh nhuệ")
      
@@ -3998,9 +3998,9 @@ spawn(function()
         _G.EliteHunterHop = V
     end)
        
-Mn:Seperator("Chest")
+Mn:Seperator("Rương")
     
-Mn:Toggle("Auto Chét",false,function(V)
+Mn:Toggle("Nhặt Rương",false,function(V)
  AutoFarmChest = V
  StopTween(AutoFarmChest)
  end)
@@ -4062,7 +4062,7 @@ spawn(function()
     end
 end)
 
-Mn:Toggle("Auto Chest Mirage",false,function(V)
+Mn:Toggle("Nhặt Rương Đảo Kì Bí",false,function(V)
  _G.ChestMirage = V
  StopTween(_G.ChestMirage)
  end)
@@ -4132,7 +4132,7 @@ end)
     end
     end)
    
-Mn:Seperator("Bone")
+Mn:Seperator("Xương")
 
 local Bone = {
     ["Reborn Skeleton"] = CFrame.new(-8769.58984, 142.13063, 6055.27637),
@@ -4180,7 +4180,7 @@ BoneCheck = Mn:Label("Xương Đang Có: N/A")
         end
     end)
 
-    Mn:Toggle("Auto Farm Bone",_G.Bone,function(V)
+    Mn:Toggle("Cày Xương",_G.Bone,function(V)
         _G.Bone = V
         StopTween(_G.Bone)
     end)
@@ -4237,7 +4237,7 @@ BoneCheck = Mn:Label("Xương Đang Có: N/A")
         end
     end)    
     
-    Mn:Toggle("Trade Bones",_G.Random_Bone,function(V)
+    Mn:Toggle("Đổi Xương",_G.Random_Bone,function(V)
         _G.Random_Bone = V
     end)
     
@@ -4251,7 +4251,7 @@ BoneCheck = Mn:Label("Xương Đang Có: N/A")
         end)
     end)
     
-    Mn:Toggle("Auto Pray",pry,function(V)
+    Mn:Toggle("Tự Động Cầu Nguyện",pry,function(V)
     _G.Pray = V
     end)
     
@@ -4267,7 +4267,7 @@ BoneCheck = Mn:Label("Xương Đang Có: N/A")
         end)
     end)
     
-    Mn:Toggle("Auto Try Luck",Trylux,function(V)
+    Mn:Toggle("Tự Động Thử Vận May",Trylux,function(V)
     _G.Trylux = V
     end)
     
@@ -4283,7 +4283,7 @@ BoneCheck = Mn:Label("Xương Đang Có: N/A")
         end)
     end)
 
-    Mn:Seperator("Cake Prince")
+    Mn:Seperator("Bánh Ngọt")
     
 local Cake = {
     ["Cookie Crafter"] = CFrame.new(-2333.28052, 37.8239059, -12093.2861),
@@ -4339,7 +4339,7 @@ end)
         end
     end)
     
-    Mn:Toggle("Auto Cake Prince",_G.DoughtBoss,function(V)
+    Mn:Toggle("Cày Hoàng Tử Bánh",_G.DoughtBoss,function(V)
         _G.DoughtBoss = V
         StopTween(_G.DoughtBoss)
     end)    
@@ -4454,16 +4454,16 @@ end)
         end
     end)
             
-    Mn:Toggle("Auto Spawn Katakuri",false,function(V)
+    Mn:Toggle("Tự Động Triệu Hồi Trùm",false,function(V)
     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner",value)
     end)
     
-    Mn:Toggle("Auto Dough King", _G.doughking,function(V)
+    Mn:Toggle("Tự Động Vua Bột", _G.doughking,function(V)
          _G.doughking = V
         StopTween( _G.doughking)
     end)
     
-    Mn:Toggle("Dough King Server hop", _G.doughkingHop,function(V)
+    Mn:Toggle("Vua Bột Đổi Máy Chủ", _G.doughkingHop,function(V)
          _G.doughkingHop = V
     end)
     
@@ -4503,9 +4503,9 @@ end)
         end
     end)
     
-   Mn:Seperator("Mastery")
+   Mn:Seperator("Thông Thạo")
     
-    Mn:Toggle("Auto Mastery Fruit",_G.FarmFruitMastery,function(V)
+    Mn:Toggle("Cày Thông Thạo Trái",_G.FarmFruitMastery,function(V)
         _G.FarmFruitMastery = V
         StopTween(_G.FarmFruitMastery)
         if _G.FarmFruitMastery == false then
@@ -4761,7 +4761,7 @@ end)
         end)
     end)
     
-    Mn:Toggle("Auto Mastery Gun ",_G.FarmGunMastery,function(V)
+    Mn:Toggle("Cày Thông Thạo Súng ",_G.FarmGunMastery,function(V)
         _G.FarmGunMastery = V
         StopTween(_G.FarmGunMastery)
     end)
@@ -4845,9 +4845,9 @@ end)
         end)
     end)
                 
-    Mn:Seperator("Instinct")
+    Mn:Seperator("Quan Sát")
     
-    Mn:Toggle("Auto Farm Instinct",_G.Observation,function(V)
+    Mn:Toggle("Cày Haki Quan Sát",_G.Observation,function(V)
         _G.Observation = V
         StopTween(_G.Observation)
     end)
@@ -4869,7 +4869,7 @@ end)
         end
     end)
    
-    Mn:Toggle("Auto Farm Instinct and Server Hop",_G.Observation_Hop,function(V)
+    Mn:Toggle("Cày Haki Và Đổi Máy Chủ",_G.Observation_Hop,function(V)
         _G.Observation_Hop = V
     end)
     
@@ -4941,24 +4941,24 @@ end)
         end)
     end)
     
-    Mn:Seperator("Boss")
+    Mn:Seperator("Trùm")
     
-    local Boss = Mn:Label("Status : Choose Boss")
+    local Boss = Mn:Label("Trạng Thái : Chọn Trùm")
 
 	spawn(function()
 		while wait() do
 			pcall(function()
 				if game:GetService("ReplicatedStorage"):FindFirstChild(_G.SelectBoss) or game:GetService("Workspace").Enemies:FindFirstChild(_G.SelectBoss) then
-					Boss:Set("Status : Yes")	
+					Boss:Set("Trạng Thái : Có")	
 				else
-					Boss:Set("Status : No")	
+					Boss:Set("Status : Không")	
 				end
 			end)
 		end
 	end)
     
     if World1 then
-        Mn:Dropdown("Choose Boss",{
+        Mn:Dropdown("Chọn Trùm",{
             "The Gorilla King",
             "Bobby",
             "Yeti",
@@ -4979,7 +4979,7 @@ end)
     end
     
     if World2 then
-        Mn:Dropdown("Choose Boss",{
+        Mn:Dropdown("Chọn Trùm",{
             "Diamond",
             "Jeremy",
             "Fajita",
@@ -4996,7 +4996,7 @@ end)
     end
     
     if World3 then
-        Mn:Dropdown("Choose Boss",{
+        Mn:Dropdown("Chọn Trùm",{
             "Stone",
             "Island Empress",
             "Kilo Admiral",
@@ -5011,7 +5011,7 @@ end)
         end)
     end
     
-    Mn:Toggle("Kill Boss",_G.FarmBoss,function(V)
+    Mn:Toggle("Đánh Trùm",_G.FarmBoss,function(V)
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("AbandonQuest")
         _G.FarmBoss = V
         StopTween(_G.FarmBoss)
@@ -5117,26 +5117,26 @@ end)
         end
     end)
 --------------------------------------------------------------------------------------------------------
-St:Seperator("Setting")
+St:Seperator("Cày Đặt")
 
-St:Toggle("Bypass Teleport",BypassTP,function(V)
+St:Toggle("Duy Chuyển Dạng Reset",BypassTP,function(V)
 BypassTP = V
 end)
 
-St:Seperator("Tween")
+St:Seperator("Di Chuyển")
 
 local SpeedList = {"100", "150", "250", "300", "325", "350"}
 getgenv().TweenSpeed = "350"
-St:Dropdown("Tween Speed", SpeedList,function(V)
+St:Dropdown("Tốc Độ Bay", SpeedList,function(V)
     getgenv().TweenSpeed = V
 end)
 
-    St:Button("Stop Tween",function()
+    St:Button("Dừng Bay",function()
         topos(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)
         _G.Clip = false
     end)
  
-St:Toggle("Bring Mob",true,function(Mag)
+St:Toggle("Gôm Quái",true,function(Mag)
     _G.BringMonster = Mag
     end)
     spawn(function()
@@ -5172,9 +5172,9 @@ St:Toggle("Bring Mob",true,function(Mag)
         end
     end)
     
-local Bring = {"Low", "Normal", "Large"}
-_G.BringMode = "Low"
-St:Dropdown("Select Bring Mob", Bring,function(V)
+local Bring = {"Ít", "Trung Bình", "Nhiều"}
+_G.BringMode = "Ít"
+St:Dropdown("Chế Độ Gôm Quái", Bring,function(V)
     _G.BringMode = V
 end)
 spawn(function()
@@ -5193,7 +5193,7 @@ spawn(function()
     end
 end)
     
-St:Toggle("Auto Aura",true,function(V)
+St:Toggle("Tự Động Bật Haki",true,function(V)
 _G.Haki = V
 end)
 spawn(function()
@@ -5209,18 +5209,18 @@ spawn(function()
     end
 end)
 
-St:Toggle("Fast Attack",true,function(r1736_51)
+St:Toggle("Đánh Nhanh",true,function(r1736_51)
 	Fast_Attack = r1736_51
 	DamageAura = r1736_51
 	ClickNoCooldown = r1736_51
 	DmgAttack.Enabled = not r1736_51
 end)
 
-St:Toggle("Turn Off Effects",true,function(V)
+St:Toggle("Tắt Hiệu Ứng Đánh",true,function(V)
 NoAttackAnimation = V
 end)
 
-St:Toggle("Turn off Notif",false,function(V)
+St:Toggle("Tắt Thông Báo",false,function(V)
 _G.Remove_trct = V
 end)
 
@@ -5234,7 +5234,7 @@ spawn(function()
 	end
 end)
 
-St:Toggle("Turn Off Count Down",true,function(Remo)
+St:Toggle("Tắt Đếm Sát Thương",true,function(Remo)
 _G.KobenHeegeen = Remo
 end)
 
@@ -5260,7 +5260,7 @@ spawn(function()
     end
 end) 
     
-St:Toggle("White Screen",_G.WhiteScreen,function(V)
+St:Toggle("Màn Hình Trắng",_G.WhiteScreen,function(V)
     _G.WhiteScreen = V
 if _G.WhiteScreen == true then
     game:GetService("RunService"):Set3dRenderingEnabled(false)
@@ -5269,7 +5269,7 @@ elseif _G.WhiteScreen == false then
 end
 end)
 
-    St:Toggle("Hide NPC",_G.hadesinvis,function(V)
+    St:Toggle("Ẩn Quái",_G.hadesinvis,function(V)
     _G.hadesinvis = V
     
     while wait() do
@@ -5300,21 +5300,21 @@ end)
     end
 end)
     
-    St:Seperator("Setting Mastery")
+    St:Seperator("Cài Đặt Cày Thông Thạo")
     
-    St:Toggle("Skill Z",true,function(V)
+    St:Toggle("Chiêu Z",true,function(V)
         _G.SkillZ = V
     end)
  
-    St:Toggle("Skill X",true,function(V)
+    St:Toggle("Chiêu X",true,function(V)
         _G.SkillX = V
     end)
     
-    St:Toggle("Skill C",true,function(V)
+    St:Toggle("Chiêu C",true,function(V)
         _G.SkillC = V
     end)
     
-     St:Toggle("Skill V",true,function(V)
+     St:Toggle("Chiêu V",true,function(V)
         _G.SkillV = V
     end)
 --------------------------------------------------------------------------------------------------------
@@ -5384,7 +5384,7 @@ end
 
     if World2 then
 
-        M:Toggle("Auto Third Sea",_G.ThirdSea,function(V)
+        M:Toggle("Tự Động Qua Sea 3",_G.ThirdSea,function(V)
             _G.ThirdSea = V
             StopTween(_G.ThirdSea)
         end)
@@ -5431,7 +5431,7 @@ end
     end
     
     if World2 then
-        M:Toggle("Auto Factory",_G.Factory,function(V)
+        M:Toggle("Đánh Nhà Máy",_G.Factory,function(V)
             _G.Factory = V
             StopTween(_G.Factory)
         end)
@@ -5459,9 +5459,9 @@ end
         end)
     end
 
-    M:Seperator("Melee")
+    M:Seperator("Phong Cách Chiến Đấu")
     
-    M:Toggle("Auto Superhuman",_G.Superhuman,function(V)
+    M:Toggle("Tự Động Lấy Superhuman",_G.Superhuman,function(V)
         _G.Superhuman = V
     end)
     
@@ -5538,7 +5538,7 @@ end
         end)
     end)
     
-    M:Toggle("Auto DeathStep",_G.DeathStep,function(V)
+    M:Toggle("Tự Động Lấy DeathStep",_G.DeathStep,function(V)
         _G.DeathStep = V
     end)
     
@@ -5564,7 +5564,7 @@ end
         end
     end)
     
-    M:Toggle("Auto Sharkman Karate",_G.Sharkman,function(V)
+    M:Toggle("Tự Động Lấy Sharkman Karate",_G.Sharkman,function(V)
         _G.Sharkman = V
     end)
     
@@ -5610,7 +5610,7 @@ end
         end)
     end)
     
-    M:Toggle("Auto Electric Claw",_G.ElectricClaw,function(V)
+    M:Toggle("Tự Động Lấy Electric Claw",_G.ElectricClaw,function(V)
         _G.ElectricClaw = V
         StopTween(_G.ElectricClaw)
     end)
@@ -5681,7 +5681,7 @@ end
         end)
     end)
     
-    M:Toggle("Auto Dragon Talon",_G.DragonTalon,function(V)
+    M:Toggle("Tự Động Lấy Dragon Talon",_G.DragonTalon,function(V)
         _G.DragonTalon = V
     end)
     
@@ -5707,7 +5707,7 @@ end
         end
     end)
     
-    M:Toggle("Auto GodHuman",_G.God_Human,function(V)
+    M:Toggle("Tự Động Lấy GodHuman",_G.God_Human,function(V)
  _G.God_Human = V
 end)
 spawn(function()
@@ -5761,10 +5761,10 @@ spawn(function()
 	end
 end)
 
-M:Seperator("Material")
+M:Seperator("Nguyên Liệu")
 
 if World2 then
-M:Toggle("Auto Radioactive",false,function(V)
+M:Toggle("Cày Vật Liệu Phóng Xạ",false,function(V)
 Radioactive = V
 StopTween(Radioactive)
 end)
@@ -5819,7 +5819,7 @@ local MaterialsPos1 = CFrame.new(-507.7895202636719, 72.99479675292969, -126.456
 end
   
 if World2 then  
-M:Toggle("",false,function(V)
+M:Toggle("Cày Giọt Nước Huyền Bí",false,function(V)
 _G.Makori_gay = V
 StopTween(_G.Makori_gay)
 end)
@@ -5874,7 +5874,7 @@ spawn(function()
 end
     
 if World1 or World2 then
-M:Toggle("Auto Magma Ore",_G.Makori_gay,function(V)
+M:Toggle("Cày Quặng Dung Nham",_G.Makori_gay,function(V)
 _G.Umm = V
 StopTween(_G.Umm)
 end)
@@ -5977,7 +5977,7 @@ spawn(function()
 end
     
 if World1 then  
-M:Toggle("Auto Angle Wings",_G.Makori_gay,function(V)
+M:Toggle("Cày Đôi Cánh Thiên Thần",_G.Makori_gay,function(V)
 _G.Wing = V
 StopTween(_G.Wing)
 end)
@@ -6032,7 +6032,7 @@ spawn(function()
 end
 
 if World1 or World2 or World3 then   
-M:Toggle("Auto Leather",_G.Makori_gay,function(V)
+M:Toggle("Cày Da",_G.Makori_gay,function(V)
 _G.Leather = V
 StopTween(_G.Leather)
 end)
@@ -6183,7 +6183,7 @@ spawn(function()
  end
   
 if World1 or world2 or World3 then    
-M:Toggle("Auto Scap Metal",false,function(V)
+M:Toggle("Cày Kim Loại Phế Liệu",false,function(V)
 Scrap = V
 StopTween(Scrap)
 end)
@@ -6334,7 +6334,7 @@ spawn(function()
 end
     
 if World3 then  
-M:Toggle("Auto Cocoa",false,function(V)
+M:Toggle("Cày Ca Cao",false,function(V)
 Cocoafarm = V
 StopTween(Cocoafarm)
 end)
@@ -6389,7 +6389,7 @@ spawn(function()
 end
  
 if World3 then     
-M:Toggle("Auto Dragon Schale",false,function(V)
+M:Toggle("Cày Vảy Rồng",false,function(V)
 Dragon_Scale = V
 StopTween(Dragon_Scale)
 end)
@@ -6444,7 +6444,7 @@ spawn(function()
 end
   
 if World3 then    
-M:Toggle("Auto Gunpowder",false,function(V)
+M:Toggle("Cày Thuốc Súng",false,function(V)
 Gunpowder = V
 StopTween(Gunpowder)
 end)
@@ -6499,7 +6499,7 @@ spawn(function()
 end
  
 if World3 then     
-M:Toggle("Auto Fish Tail",false,function(V)
+M:Toggle("Cày Đuôi Cá",false,function(V)
 Fish = V
 StopTween(Fish)
 end)
@@ -6554,7 +6554,7 @@ spawn(function()
 end
     
 if World3 then  
-M:Toggle("Auto Minihee",false,function(V)
+M:Toggle("Cày Sừng Tê Giác",false,function(V)
 MiniHee = V
 StopTween(MiniHee)
 end)
@@ -6608,9 +6608,9 @@ spawn(function()
     end)
 end
 
-    M:Seperator("Advance Raid")
+    M:Seperator("Tập Kích Nâng Cao")
     
-    M:Toggle("Auto Phoenix Raid",_G.AdvanceDungeon,function(V)
+    M:Toggle("Cày Phoenix Tập Kích",_G.AdvanceDungeon,function(V)
         _G.AdvanceDungeon = V
         StopTween(_G.AdvanceDungeon)
     end)
@@ -11478,11 +11478,11 @@ P:Seperator("Chỉ Số")
         end
     end)
     
-local Melee = P:Label("Melee: ")
-local Defense = P:Label("Defend: ")
-local Sword = P:Label("Sword: ")
-local Gun = P:Label("Gun: ")
-local Fruit = P:Label("Fruit: ")
+local Melee = P:Label("Võ: ")
+local Defense = P:Label("Máu: ")
+local Sword = P:Label("Kiếm: ")
+local Gun = P:Label("Súng: ")
+local Fruit = P:Label("Trái: ")
 
     spawn(function()
         while wait() do
@@ -12813,9 +12813,9 @@ end)
 --------------------------------------------------------------------------------------------------------
 local players = game:GetService("Players")
 game:GetService("StarterGui"):SetCore("SendNotification", {
-    Title = "Min Gaming";
+    Title = "Tiendepzai";
     Text = "Tải Hoàn Tất!";
-    Icon = "rbxthumb://type=Asset&id=94170180796200&w=150&h=150";
+    Icon = "rbxthumb://type=Asset&id=92984205310992&w=150&h=150";
     Duration = 10
 })
 
