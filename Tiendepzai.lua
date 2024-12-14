@@ -1386,7 +1386,7 @@ L2.BorderSizePixel = 0
 L2.Position = UDim2.new(0.120833337, 0, 0.0952890813, 0)
 L2.Size = UDim2.new(0, 53.5, 0, 53.5)
 L2.BackgroundTransparency = 1.000
-L2.Image = "rbxassetid://92984205310992"
+L2.Image = "rbxassetid://94170180796200"
 L2.Draggable = true
 L2.MouseButton1Click:Connect(function()
   game:GetService("VirtualInputManager"):SendKeyEvent(true,305,false,game)
@@ -3502,7 +3502,7 @@ I:Seperator("Discord")
 
 I:Label("Mọi Người Đều Tham Gia Giao Lưu")
 I:Button("Copy Discord Link",function()
-setclipboard("https://discord.gg/c5EYjcvC") 
+setclipboard("MEMAYBEO") 
 end)
 
 I:Seperator("Thời Gian")
@@ -10614,7 +10614,7 @@ V:Toggle("Định vị Đảo Bí Ẩn", false, function(V)
 
 V:Seperator("Trò Đùa")
 V:Button('Mưa Trái', function()
-for i, v in pairs(game:GetObjects("rbxassetid://14759368201")[1]:GetChildren()) do
+for i, v in pairs(game:GetObjects("rbxassetid://94170180796200")[1]:GetChildren()) do
             v.Parent = game.Workspace.Map
             v:MoveTo(game.Players.LocalPlayer.Character.PrimaryPart.Position + Vector3.new(math.random(-50, 50), 100, math.random(-50, 50)))
             if v.Fruit:FindFirstChild("AnimationController") then
@@ -10899,7 +10899,7 @@ V:Button("Hiện Toàn Bộ Thông Tin", function(V)
 		for k,v in pairs(cac) do
 			if ListHuhu[v] and game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Buy"..v,true) == 1 then 
 				local huhu = Instance.new("ImageLabel",MeleeG)
-				huhu.Image = "rbxassetid://9945562382"
+				huhu.Image = "rbxassetid://94170180796200"
 				huhu.ImageRectSize = Vector2.new(100,100)
 				huhu.ImageRectOffset = ListHuhu[v]*100
 			end
@@ -12815,7 +12815,7 @@ local players = game:GetService("Players")
 game:GetService("StarterGui"):SetCore("SendNotification", {
     Title = "Tiendepzai hub";
     Text = "Tải Hoàn Tất!";
-    Icon = "rbxthumb://type=Asset&id=92984205310992&w=150&h=150";
+    Icon = "rbxthumb://type=Asset&id=94170180796200&w=150&h=150";
     Duration = 10
 })
 
