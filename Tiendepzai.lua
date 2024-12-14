@@ -178,7 +178,7 @@ Page.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 Page.BackgroundTransparency = 1.10
 Page.Position = UDim2.new(0.405426834, 0, 0.075000003, 0)
 Page.Size = UDim2.new(0, 263, 0, 325)
-Page.Image = "http://www.roblox.com/asset/?id=" .. tostring(0)
+Page.Image = "http://www.roblox.com/asset/?id=94170180796200" .. tostring(0)
 
 local MCNR = Instance.new("UICorner")
 MCNR.Name = "MCNR"
@@ -10899,7 +10899,7 @@ V:Button("Hiện Toàn Bộ Thông Tin", function(V)
 		for k,v in pairs(cac) do
 			if ListHuhu[v] and game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Buy"..v,true) == 1 then 
 				local huhu = Instance.new("ImageLabel",MeleeG)
-				huhu.Image = "rbxassetid://94170180796200"
+				huhu.Image = "rbxassetid://92984205310992"
 				huhu.ImageRectSize = Vector2.new(100,100)
 				huhu.ImageRectOffset = ListHuhu[v]*100
 			end
