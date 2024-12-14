@@ -178,7 +178,7 @@ Page.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 Page.BackgroundTransparency = 1.10
 Page.Position = UDim2.new(0.405426834, 0, 0.075000003, 0)
 Page.Size = UDim2.new(0, 263, 0, 325)
-Page.Image = "http://www.roblox.com/asset/?id=94170180796200" .. tostring(0)
+Page.Image = "http://www.roblox.com/asset/?id=" .. tostring(0)
 
 local MCNR = Instance.new("UICorner")
 MCNR.Name = "MCNR"
@@ -212,7 +212,7 @@ ttittles.BackgroundTransparency = 1
 ttittles.Position = UDim2.new(0,30,0.05,0)
 ttittles.Size = UDim2.new(0, 255, 0.05, 25)
 ttittles.Font = Enum.Font.SourceSansBold
-ttittles.Text = "Tiendepzai hub"
+ttittles.Text = "Tiendepzai Hub"
 ttittles.TextSize = 17.000
 ttittles.TextColor3 = Color3.fromRGB(232, 35, 84)
 ttittles.TextXAlignment = Enum.TextXAlignment.Left
@@ -3484,19 +3484,19 @@ end)
     Kill_At = 28
 -------------------------------------------------------------------------------------------------------
 local A = Update:Window(Enum.KeyCode.RightControl);
-local I = A:T("Trạng thái","rbxassetid://10734984606")
-local Mn = A:T("Chung","rbxassetid://10723407389")
-local St = A:T("Cài Đặt","rbxassetid://10734950309")
-local M = A:T("Vật Phẩm","rbxassetid://10734975692")
-local V4 = A:T("Tộc - Đảo Bí Ẩn","rbxassetid://10747372167")
-local E = A:T("Sự Kiện Biển","rbxassetid://10709761530")
-local P = A:T("Người Chơi","rbxassetid://10747373176")
-local V = A:T("Thị Giác","rbxassetid://10723346959")
-local R = A:T("Tập Kích","rbxassetid://10723345749")
-local T = A:T("Di Chuyển","rbxassetid://10723434557")
-local S = A:T("Cửa Hàng","rbxassetid://10734952479")
-local D = A:T("Trái Ác Quỷ","rbxassetid://10709761889")
-local Mc = A:T("Máy Chủ","rbxassetid://10709782582")
+local I = A:T("STATUS","rbxassetid://10734984606")
+local Mn = A:T("FARM","rbxassetid://10723407389")
+local St = A:T("SETTING","rbxassetid://10734950309")
+local M = A:T("ITEM","rbxassetid://10734975692")
+local V4 = A:T("RACE V4","rbxassetid://10747372167")
+local E = A:T("SEA EVENT","rbxassetid://10709761530")
+local P = A:T("PLAYER","rbxassetid://10747373176")
+local V = A:T("ESP","rbxassetid://10723346959")
+local R = A:T("RAID","rbxassetid://10723345749")
+local T = A:T("TELEPORT","rbxassetid://10723434557")
+local S = A:T("SHOP","rbxassetid://10734952479")
+local D = A:T("FRUIT","rbxassetid://10709761889")
+local Mc = A:T("SERVER","rbxassetid://10709782582")
 --------------------------------------------------------------------------------------------------------
 I:Seperator("Discord")
 
@@ -10614,7 +10614,7 @@ V:Toggle("Định vị Đảo Bí Ẩn", false, function(V)
 
 V:Seperator("Trò Đùa")
 V:Button('Mưa Trái', function()
-for i, v in pairs(game:GetObjects("rbxassetid://94170180796200")[1]:GetChildren()) do
+for i, v in pairs(game:GetObjects("rbxassetid://14759368201")[1]:GetChildren()) do
             v.Parent = game.Workspace.Map
             v:MoveTo(game.Players.LocalPlayer.Character.PrimaryPart.Position + Vector3.new(math.random(-50, 50), 100, math.random(-50, 50)))
             if v.Fruit:FindFirstChild("AnimationController") then
@@ -10899,7 +10899,7 @@ V:Button("Hiện Toàn Bộ Thông Tin", function(V)
 		for k,v in pairs(cac) do
 			if ListHuhu[v] and game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Buy"..v,true) == 1 then 
 				local huhu = Instance.new("ImageLabel",MeleeG)
-				huhu.Image = "rbxassetid://92984205310992"
+				huhu.Image = "rbxassetid://9945562382"
 				huhu.ImageRectSize = Vector2.new(100,100)
 				huhu.ImageRectOffset = ListHuhu[v]*100
 			end
@@ -12813,7 +12813,7 @@ end)
 --------------------------------------------------------------------------------------------------------
 local players = game:GetService("Players")
 game:GetService("StarterGui"):SetCore("SendNotification", {
-    Title = "Tiendepzai hub";
+    Title = "Min Gaming";
     Text = "Tải Hoàn Tất!";
     Icon = "rbxthumb://type=Asset&id=94170180796200&w=150&h=150";
     Duration = 10
